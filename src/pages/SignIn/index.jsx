@@ -55,31 +55,13 @@ export default SignIn = ({ navigation }) => {
       .then(res => res.json())
       .then(res => {
         if (res.valid) {
-          console.log("signed in");
           navigation.navigate("App");
         } else if (username !== '' && password !== '') {
-          console.log("hmm");
         }
       })
       .catch(e => console.error(e));
   };
 
-  //auto login
-  PostRequest('api/login', {
-    username: "mathiaschunnoo",
-    password: "password"
-  })
-    .then(res => res.json())
-    .then(res => {
-      if (res.valid) {
-        console.log("signed in");
-        navigation.navigate("App");
-      } else if (username !== '' && password !== '') {
-        console.log("hmm");
-      }
-    })
-    .catch(e => console.error(e));
-  
   return (
     <Container>
       <Logo source={{ uri: "http://" + config.address + "/img/logo.png" }} />

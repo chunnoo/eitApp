@@ -56,7 +56,7 @@ export default Profile = ({ navigation }) => {
 
     PostRequest("api/getpostsbyuser", {userid: userId})
       .then(res => res.json())
-      .then(rows => {setPosts(rows.map(row => ({...row, itemtype: "post"}))); console.log(rows);})
+      .then(rows => setPosts(rows.map(row => ({...row, itemtype: "post"}))))
       .catch(e => console.error(e));
   };
 

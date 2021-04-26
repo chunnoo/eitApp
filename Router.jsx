@@ -116,7 +116,7 @@ const AppTabs = createMaterialBottomTabNavigator(
     }
   },
   {
-    initialRouteName: "ProfileTab",
+    initialRouteName: "FeedTab",
     activeColor: '#779860',
     inactiveColor: '#AFC49F',
     barStyle: { backgroundColor: '#e7f0dd' }
